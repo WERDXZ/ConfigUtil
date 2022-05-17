@@ -67,6 +67,22 @@ public class Container {
 
     /**
       * Author: WERDXZ
+      * Description: Create a new config instance
+      * Function Name: CreateSubConfigInstance
+      * @param: configInstance - the config instance to be added
+      * @return: boolean
+      * Date: 20:09 2022/5/14
+    */
+    public boolean CreateSubConfigInstance(ConfigInstance configInstance){
+
+        this.AllocateMemory(TYPE_CONFIG_INSTANCE);
+        this.SubConfigInstance[this.SubConfigInstance.length-1]=configInstance;
+        return true;
+    }
+
+
+    /**
+      * Author: WERDXZ
       * Description: Allocate memory for the lists
       * Function Name: AllocateMemory
       * @param type - the type of the container
